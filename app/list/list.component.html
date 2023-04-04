@@ -1,0 +1,24 @@
+<div class="addtask">
+  <div>
+    <span class="title">Title:</span>
+    <input [(ngModel)]="title" type ="text">
+</div>
+<div>
+  <span class="description">description:</span>
+  <input [(ngModel)]="description" type ="text">
+</div>
+<div>
+  <button (click)="addTask(title,description)">Ajouter une tache</button>
+</div>
+</div>
+<div class="task" *ngFor="let task of taskList ; let i = index">
+  <div>
+    <span class="title"> Task Number :</span>{{i+1}};
+    <span class="title">Titre de tache </span>{{task.title}}
+    <span class="remove">
+      <button (click)="removeTask(i)"> supprimer la tache</button>
+    </span>
+  </div>
+
+</div>
+
